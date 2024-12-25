@@ -8,4 +8,4 @@ It challenges players to guess a randomly generated number within a predefined r
 With a clean UI and engaging functionality, it's the perfect way to test your guessing skills!
 
 ### 🎮 Live Demo
-[Play the Game Online!](#) *(https://varshan2026.github.io/guessgame/)*
+ Try it: https://varshan2026.github.io/guessgame/
