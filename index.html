@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+
+    <link rel="icon" href="./img/favicon.png">
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: url('./img/bg.jpg');
+        }
+
+        @media screen and (max-width: 998px) {
+           
+            body{
+            background-image: url('./img/bgmob.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+           }     
+
+           input{
+            width: 90%;
+           }
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .game{
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input{
+            padding: 10px;
+            margin: 5px;
+            background-color: rgb(192, 255, 98);
+            color: black;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+        }
+
+        input:focus{
+            outline:none;
+        }
+
+        button{
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background-color: black;
+            color: greenyellow;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        #error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        #error-number {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+
+        .popup{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        .out{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 40px;
+            margin: 20px;
+            display: none;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        img{
+            width: 100% !important;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="game">
+            <input type="number" id="textbox" required>
+            <button id="btn" onclick="checknumber()" type="submit">Check</button>
+            <p id="error-message">Please enter a number before check!</p>
+            <p id="error-number">Please enter a number between 1 to 5</p>
+            <p id="result">You are Right / Wrong</p>
+            <p id="guesscount">Available Guess: 3</p>
+        </div>
+
+        <div class="popup">
+            <img src="./img/gold.svg" alt="">
+            <h1>You are correct!!</h1>
+        </div>
+
+        <div class="out">
+            <img src="./img/error.svg" alt="">
+            <h2 id="failnum">you are lost, <br> Generated Random Number is: </h2>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
